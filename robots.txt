@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mkang4936.github.io/work-notes/sitemap.xml
