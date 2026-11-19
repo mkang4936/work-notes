@@ -464,3 +464,6 @@ figcaption { margin-top: 10px; text-align: center; font-size: 13px; line-height:
 .due .d { font-size: 15px; line-height: 1.6; color: var(--ink); margin-top: 2px; text-wrap: balance; }
 .due .cs { font-size: 13px; line-height: 1.5; color: var(--body); margin-top: 4px; text-wrap: balance; }
 .due .cs b { display: block; }
+
+.led.mini .c-pay { width: 116px; }
+.led.mini td.pay { white-space: normal; }
