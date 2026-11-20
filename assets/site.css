@@ -514,6 +514,14 @@ figcaption { margin-top: 10px; text-align: center; font-size: 13px; line-height:
   .post.law .tb.k5 td:nth-child(5)::before, .post.law .tb.k6 td:nth-child(6)::before { float: left; margin-right: 12px; text-align: left; line-height: 24px;}
 }
 
+.gx .gx-bar .fill.seg.pa { background: var(--bar); border-radius: 3px 0 0 3px; }
+.gx .gx-bar .fill.seg.pb { background: var(--ink); border-radius: 0; }
+.gx .gx-bar .fill.seg.pb:last-child { border-radius: 0 3px 3px 0; }
+.gx .gx-bar .fill.seg.pz { background: var(--bar-hl); border-radius: 0 3px 3px 0; }
+.gx-key .sw.pa { background: var(--bar); }
+.gx-key .sw.pb { background: var(--ink); }
+.gx-key .sw.pz { background: var(--bar-hl); }
+
 .rf-btn { display: flex; align-items: center; justify-content: space-between; gap: 12px; width: 100%; margin: 0; padding: 0; border: 0; background: none; font: inherit; color: inherit; text-align: left; cursor: pointer; }
 .rf-btn:focus-visible { outline: 2px solid var(--hue); outline-offset: 4px; border-radius: 4px; }
 .rf-act { flex: none; display: inline-flex; align-items: center; gap: 2px; font-size: 15px; line-height: 1.6; font-weight: 700; color: var(--hue); border: 1px solid var(--rule); border-radius: 999px; padding: 2px 8px 2px 12px; }
