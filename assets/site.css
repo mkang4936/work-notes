@@ -680,6 +680,27 @@ figcaption { margin-top: 10px; text-align: center; font-size: 13px; line-height:
 .js .fig.on .pd-seg { transition: transform 1.2s cubic-bezier(.2,.9,.3,1); transition-delay: calc(var(--i, 0) * .6s + .2s); }
 .still .pd-seg { transition: none !important; }
 @media (prefers-reduced-motion: reduce) { .pd-seg { transition: none !important; } }
+.tx { display: grid; gap: 14px; padding: 4px 0 2px; }
+.tx-row { display: grid; grid-template-columns: 132px minmax(0, 1fr); column-gap: 12px; row-gap: 4px; align-items: center; }
+.tx-scale > span:first-child { font-size: 13px; line-height: 1.5; color: var(--body); }
+.tx-scale .m { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); font-size: 13px; line-height: 1.5; color: var(--body); text-align: center; border-bottom: 1px solid var(--line); }
+.tx-name { font-size: 15px; line-height: 1.5; font-weight: 700; color: var(--ink); }
+.tx-track { position: relative; height: 22px; border-radius: 3px; background-color: var(--soft); background-image: repeating-linear-gradient(to right, transparent 0, transparent calc(100% / 12 - 1px), var(--line) calc(100% / 12 - 1px), var(--line) calc(100% / 12)); }
+.tx-bar { position: absolute; top: 0; bottom: 0; right: 0; border-radius: 3px; background: var(--bar); transform-origin: left; }
+.tx-row.hl .tx-bar { background: var(--bar-hl); }
+.tx-note { grid-column: 2; font-size: 13px; line-height: 1.5; color: var(--body); }
+@media (max-width: 600px) {
+  .tx-row { grid-template-columns: minmax(0, 1fr); }
+  .tx-scale > span:first-child { display: none; }
+  .tx-note { grid-column: 1; }
+}
+.js .fig:not(.on) .tx-bar { transform: scaleX(0); }
+.js .fig.on .tx-bar { transition: transform 1.2s cubic-bezier(.2,.9,.3,1); transition-delay: calc(var(--i, 0) * .6s + .2s); }
+.still .tx-bar { transition: none !important; }
+@media (prefers-reduced-motion: reduce) { .tx-bar { transition: none !important; } }
+.dt-yes.hl .in { background: var(--hl-bg); border-color: var(--hl-bd); }
+.led.mini.pay2 th.c-pay, .led.mini.pay2 td.pay { text-align: center; white-space: normal; }
+@media (max-width: 420px) { .led.mini.pay2 .c-pay { width: 64px; } .led.mini.pay2 td.l { white-space: normal; } .led.mini.pay2 td.pay .nw { display: block; } }
 
 .rf-btn { display: flex; align-items: center; justify-content: space-between; gap: 12px; width: 100%; margin: 0; padding: 0; border: 0; background: none; font: inherit; color: inherit; text-align: left; cursor: pointer; }
 .rf-btn:focus-visible { outline: 2px solid var(--hue); outline-offset: 4px; border-radius: 4px; }
