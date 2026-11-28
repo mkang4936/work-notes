@@ -661,6 +661,25 @@ figcaption { margin-top: 10px; text-align: center; font-size: 13px; line-height:
 .js .fig.on .bt-seg { transition: transform 1.2s cubic-bezier(.2,.9,.3,1); transition-delay: calc(var(--i, 0) * .6s + .2s); }
 .still .bt-seg { transition: none !important; }
 @media (prefers-reduced-motion: reduce) { .bt-seg { transition: none !important; } }
+.pd { display: grid; gap: 10px; padding: 4px 0 2px; }
+.pd-bar { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 4px; height: 26px; }
+.pd-seg { height: 100%; border-radius: 3px; background: var(--bar); transform-origin: left; }
+.pd-cols { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 4px; }
+.pd-col { border: 1px solid transparent; border-radius: 8px; padding: 8px 10px; background: var(--soft); }
+.pd-col.hl { background: var(--hl-bg); border-color: var(--hl-bd); }
+.pd-sw { display: inline-block; width: 12px; height: 12px; margin-right: 6px; border-radius: 2px; background: var(--bar); vertical-align: -1px; }
+.pd-seg.a, .pd-sw.a { background: var(--ink); }
+.pd-seg.g, .pd-sw.g { background: var(--bar-hl); }
+.pd-seg.c, .pd-sw.c { background: var(--line); }
+.pd-h { font-size: 15px; line-height: 1.6; font-weight: 700; color: var(--ink); }
+.pd-w { font-size: 13px; line-height: 1.5; color: var(--body); }
+.pd-col .d { margin-top: 6px; font-size: 15px; line-height: 1.6; color: var(--ink); }
+.pd-col .sub { display: block; margin-top: 2px; font-size: 13px; line-height: 1.5; color: var(--body); }
+@media (max-width: 600px) { .pd-cols { grid-template-columns: minmax(0, 1fr); gap: 6px; } }
+.js .fig:not(.on) .pd-seg { transform: scaleX(0); }
+.js .fig.on .pd-seg { transition: transform 1.2s cubic-bezier(.2,.9,.3,1); transition-delay: calc(var(--i, 0) * .6s + .2s); }
+.still .pd-seg { transition: none !important; }
+@media (prefers-reduced-motion: reduce) { .pd-seg { transition: none !important; } }
 
 .rf-btn { display: flex; align-items: center; justify-content: space-between; gap: 12px; width: 100%; margin: 0; padding: 0; border: 0; background: none; font: inherit; color: inherit; text-align: left; cursor: pointer; }
 .rf-btn:focus-visible { outline: 2px solid var(--hue); outline-offset: 4px; border-radius: 4px; }
