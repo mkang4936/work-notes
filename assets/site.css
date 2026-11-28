@@ -701,6 +701,12 @@ figcaption { margin-top: 10px; text-align: center; font-size: 13px; line-height:
 .dt-yes.hl .in { background: var(--hl-bg); border-color: var(--hl-bd); }
 .led.mini.pay2 th.c-pay, .led.mini.pay2 td.pay { text-align: center; white-space: normal; }
 @media (max-width: 420px) { .led.mini.pay2 .c-pay { width: 64px; } .led.mini.pay2 td.l { white-space: normal; } .led.mini.pay2 td.pay .nw { display: block; } }
+.bars.wide.tax2 .bar-row { grid-template-columns: 210px 1fr 150px; }
+@media (max-width: 600px) {
+  .bars.wide.tax2 .bar-row { grid-template-columns: 1fr 136px; row-gap: 2px; }
+  .bars.wide.tax2 .bar-row .l { grid-column: 1 / -1; }
+}
+.bars.wide.tax2 { margin-top: 4px; }
 
 .rf-btn { display: flex; align-items: center; justify-content: space-between; gap: 12px; width: 100%; margin: 0; padding: 0; border: 0; background: none; font: inherit; color: inherit; text-align: left; cursor: pointer; }
 .rf-btn:focus-visible { outline: 2px solid var(--hue); outline-offset: 4px; border-radius: 4px; }
